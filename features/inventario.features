@@ -1,0 +1,5 @@
+Feature: Gestión de inventario
+  Scenario: Crear un producto
+    Given un producto nuevo
+    When lo envío a la API
+    Then la respuesta debe ser 201

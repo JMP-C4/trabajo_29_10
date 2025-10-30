@@ -1,0 +1,35 @@
+[project]
+name = "inventario"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "JMP-C4",email = "jmparada0610@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "sqlalchemy (>=2.0.44,<3.0.0)",
+    "flask-sqlalchemy (>=3.1.1,<4.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "inventario", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+flask = "^3.1"
+flask-sqlalchemy = "^3.1"
+flask-paginate = "^2024"
+[dependency-groups]
+dev = [
+    "behave (>=1.3.3,<2.0.0)",
+    "pytest (>=8.4.2,<9.0.0)",
+    "pytest-mock (>=3.15.1,<4.0.0)",
+    "coverage (>=7.11.0,<8.0.0)",
+    "locust (>=2.42.1,<3.0.0)",
+    "pytest-cov (>=7.0.0,<8.0.0)"
+]
